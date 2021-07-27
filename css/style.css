@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Tourney:wght@300&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(3, 0, 26);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Tourney', cursive;
+    color: white;
+}
+
+hr {
+    margin: 20px 0;
+}
+
+h1.title {
+    margin: 0;
+    font-size: 60px;
+}
+
+.title {
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 0 0 5px cyan;
+    text-align: center;
+}
+
+.author {
+    margin: 0;
+    font-family: monospace;
+    margin-bottom: 30px;
+}
+
+.container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.game-area {
+    width: fit-content;
+    height: fit-content;
+    padding: 30px;
+    background-color: rgb(6, 0, 48);
+    border: 1px solid rgb(12, 0, 94);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.info {
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(6, 0, 48);
+    border: 1px solid rgb(12, 0, 94);
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+button {
+    border: none;
+    color: white;
+    background-color: lightseagreen;
+    padding: 10px 25px;
+    width: 200px;
+}
+
+canvas {
+    background-color: rgb(0, 97, 68);
+}
