@@ -133,7 +133,7 @@ class Game {
             }
             this.turn = this.white;
             this.update();
-        }, 10);
+        }, 500);
     }
 
     random() {
