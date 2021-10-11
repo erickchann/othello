@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Tourney:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 * {
-    margin: 0;
     box-sizing: border-box;
 }
 
@@ -10,81 +9,145 @@ html, body {
 }
 
 body {
-    margin: 0;
     padding: 0;
-    background-color: rgb(3, 0, 26);
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Tourney', cursive;
-    color: white;
-}
-
-hr {
-    margin: 20px 0;
-}
-
-h1.title {
-    margin: 0;
-    font-size: 60px;
-}
-
-.title {
-    margin-bottom: 20px;
-    color: white;
-    text-shadow: 0 0 5px cyan;
-    text-align: center;
-}
-
-.author {
-    margin: 0;
-    font-family: monospace;
-    margin-bottom: 30px;
-}
-
-.container {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
+    background-color: #111827;
+    font-family: 'Balsamiq Sans', cursive;
 }
 
 .game-area {
+    width: 960px;
+    height: 600px;
+    display: flex;
+}
+
+.control {
+    margin-left: 2rem;
+    background-color: #374151;
     width: fit-content;
+    border: 2px solid lightblue;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: fit-content;
-    padding: 30px;
-    background-color: rgb(6, 0, 48);
-    border: 1px solid rgb(12, 0, 94);
-    border-radius: 10px;
+    padding: 2rem;
+}
+
+.title {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+table {
+    margin-bottom: 2rem;
+}
+
+.modal {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100vw;
+    height: 100vh;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 10px;
 }
 
-.info {
-    padding: 10px;
-    width: fit-content;
-    height: fit-content;
-    background-color: rgb(6, 0, 48);
-    border: 1px solid rgb(12, 0, 94);
-    border-radius: 10px;
-    margin: 0 10px;
+.modal-inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    animation: animate .5s forwards;
 }
 
-button {
+.modal-inner .title {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.modal-inner ul {
+    margin: 0;
+    padding: 0;
+}
+
+.modal-inner ul li {
+    text-align: center;
+    list-style: none;
+    margin: .5rem 0;
+}
+
+input.name {
+    margin-top: 2rem;
+    width: 100%;
+    outline: none;
+    font-family: inherit;
+    padding: .5em 1em;
+    font-size: 1rem;
+}
+
+.button-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.button-group button {
     border: none;
+    margin: 0 .5rem;
+    padding: .5em 2em;
     color: white;
-    background-color: lightseagreen;
-    padding: 10px 25px;
-    width: 200px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #0069d9;
+    transition: .2s;
 }
 
-canvas {
-    background-color: rgb(0, 97, 68);
+.button-group button:disabled {
+    cursor: not-allowed;
+    background-color: gray;
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+button.white:hover {
+    background-color: #b7b7dd;
+}
+
+button.black:hover {
+    background-color: #272729;
+}
+
+button.reset {
+    margin-top: 1rem;
+    padding: .5em 1em;
+    font-family: inherit;
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.timer {
+    display: none;
+    font-size: 4rem;
+    color: white;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }

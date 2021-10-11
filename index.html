@@ -9,37 +9,62 @@
 </head>
 <body>
     
-    <div class="container">
-        <h1 class="title">Othello</h1>
-        <p class="author">Made By Erick Chandra</p>
+    <div class="modal" aria-modal="true">
+        <div class="modal-inner">
+            <h1 class="title">Instructions</h1>
 
-        <div class="row">
-            <div class="game-area">
-                <canvas width="400" height="400"></canvas>
+            <ul>
+                <li>Black always goes first in Flipping</li>
+                <li>Game will show every possible legal move suggestion</li>
+                <li>Player can click any suggested legal moves</li>
+                <li>Place disc in a spot that surrounds an opponent’s disc</li>
+                <li>Pass the turn to your opponent to continue playing. </li>
+            </ol>
+
+            <input type="text" placeholder="Enter Your Name" class="name" onkeyup="removeDisabled()">
+
+            <div class="button-group">
+                <button type="button" class="white" onclick="init(2)" disabled>White</button>
+                <button type="button" class="black" onclick="init(1)" disabled>Black</button>
+            </div>
+        </div>
+
+        <h1 class="timer">3</h1>
+    </div>
+
+    <div class="game-area">
+        <canvas width="600" height="600"></canvas>
+
+        <div class="control">
+            <h2 class="title">Score</h2>
+
+            <table>
+                <tr>
+                    <td>You</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>:</td>
+                    <td class="player-score">2</td>
+                </tr>
+                <tr>
+                    <td>Computer</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>:</td>
+                    <td class="computer-score">2</td>
+                </tr>
+            </table>
+
+            <div class="form-group">
+                <input type="checkbox" id="sound">
+                <label for="sound">Enable Sound</label>
             </div>
 
-            <div class="info">
-                <h2 class="title">Score</h2>
-                
-                <table>
-                    <tr>
-                        <td>You:</td>
-                        <td id="player">0</td>
-                    </tr>
-
-                    <tr>
-                        <td>Computer:</td>
-                        <td id="comp">0</td>
-                    </tr>
-                </table>
-
-                <hr>
-
-                <button type="button" onclick="location.reload()">Reset</button>
-            </div>
+            <button type="button" class="reset" onclick="location.reload()">Reset</button>
         </div>
     </div>
 
+    <audio src="sound/background.mp3" id="audio" loop></audio>
     <script src="src/Game.js"></script>
     <script src="src/main.js"></script>
 </body>
