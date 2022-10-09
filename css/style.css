@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 * {
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -15,7 +16,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #111827;
-    font-family: 'Balsamiq Sans', cursive;
+    font-family: "Balsamiq Sans", cursive;
 }
 
 .game-area {
@@ -62,7 +63,7 @@ table {
     display: flex;
     align-items: center;
     flex-direction: column;
-    animation: animate .5s forwards;
+    animation: animate 0.5s forwards;
 }
 
 .modal-inner .title {
@@ -78,7 +79,7 @@ table {
 .modal-inner ul li {
     text-align: center;
     list-style: none;
-    margin: .5rem 0;
+    margin: 0.5rem 0;
 }
 
 input.name {
@@ -86,7 +87,7 @@ input.name {
     width: 100%;
     outline: none;
     font-family: inherit;
-    padding: .5em 1em;
+    padding: 0.5em 1em;
     font-size: 1rem;
 }
 
@@ -99,14 +100,14 @@ input.name {
 
 .button-group button {
     border: none;
-    margin: 0 .5rem;
-    padding: .5em 2em;
+    margin: 0 0.5rem;
+    padding: 0.5em 2em;
     color: white;
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
     background-color: #0069d9;
-    transition: .2s;
+    transition: 0.2s;
 }
 
 .button-group button:disabled {
@@ -128,7 +129,7 @@ button.black:hover {
 
 button.reset {
     margin-top: 1rem;
-    padding: .5em 1em;
+    padding: 0.5em 1em;
     font-family: inherit;
     width: 100%;
     border: none;
@@ -150,4 +151,26 @@ button.reset {
     100% {
         transform: scale(1);
     }
+}
+
+/* Only Desktop Overlay */
+#only-desktop-overlay {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 1000000;
+    align-items: center;
+    padding: 0 2vw;
+}
+
+#only-desktop-overlay .icon {
+    font-size: 30vw;
+}
+
+#only-desktop-overlay .text {
+    padding: 0 5vw;
 }
